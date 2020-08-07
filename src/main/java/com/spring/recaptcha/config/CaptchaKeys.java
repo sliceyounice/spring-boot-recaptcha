@@ -19,8 +19,11 @@ public class CaptchaKeys {
         return site;
     }
 
-    public CaptchaKeys(String secret, String site) {
+    public void setSecret(String secret) {
         this.secret = secret;
+    }
+
+    public void setSite(String site) {
         this.site = site;
     }
 }
