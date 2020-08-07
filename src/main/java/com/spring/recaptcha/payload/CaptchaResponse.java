@@ -13,6 +13,8 @@ public class CaptchaResponse {
     @JsonProperty("challenge_ts")
     private String challengeTs;
 
+    private String hostname;
+
     @JsonProperty("error-codes")
     private ErrorCode[] errorCodes;
 
@@ -61,11 +63,15 @@ public class CaptchaResponse {
         return false;
     }
 
-    public CaptchaResponse(boolean success, String challengeTs, ErrorCode[] errorCodes) {
+    public CaptchaResponse(boolean success, String challengeTs, String hostname, ErrorCode[] errorCodes) {
         this.success = success;
         this.challengeTs = challengeTs;
+        this.hostname = hostname;
         this.errorCodes = errorCodes;
     }
+
+    //used by Jackson
+    protected CaptchaResponse() {}
 
     public boolean isSuccess() {
         return success;
@@ -77,5 +83,9 @@ public class CaptchaResponse {
 
     public ErrorCode[] getErrorCodes() {
         return errorCodes;
+    }
+
+    public String getHostname() {
+        return hostname;
     }
 }
