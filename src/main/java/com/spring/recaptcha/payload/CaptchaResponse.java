@@ -3,13 +3,9 @@ package com.spring.recaptcha.payload;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
 
 import java.util.Arrays;
 
-@Getter
-@AllArgsConstructor
 public class CaptchaResponse {
 
     private boolean success;
@@ -63,5 +59,23 @@ public class CaptchaResponse {
             }
         }
         return false;
+    }
+
+    public CaptchaResponse(boolean success, String challengeTs, ErrorCode[] errorCodes) {
+        this.success = success;
+        this.challengeTs = challengeTs;
+        this.errorCodes = errorCodes;
+    }
+
+    public boolean isSuccess() {
+        return success;
+    }
+
+    public String getChallengeTs() {
+        return challengeTs;
+    }
+
+    public ErrorCode[] getErrorCodes() {
+        return errorCodes;
     }
 }
