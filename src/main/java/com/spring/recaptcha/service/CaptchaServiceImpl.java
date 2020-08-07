@@ -26,8 +26,6 @@ public class CaptchaServiceImpl implements CaptchaService {
 
     protected static final String RECAPTCHA_URL_TEMPLATE = "https://www.google.com/recaptcha/api/siteverify?secret=%s&response=%s&remoteip=%s";
 
-    private static final ObjectMapper mapper = new ObjectMapper();
-
     private String captchaSecret() {
         return this.captchaKeys.getSecret();
     }
