@@ -28,6 +28,8 @@ dependencies {
 	compile group: 'com.konghq', name: 'unirest-java', version: '3.5.00'
 	compile group: 'com.konghq', name: 'unirest-objectmapper-jackson', version: '2.3.02'
 	compile group: 'com.google.guava', name: 'guava', version: '11.0.2'
+	compile group: 'org.springframework.boot', name: 'spring-boot-devtools', version: '2.3.2.RELEASE'
+
 
 
 }
