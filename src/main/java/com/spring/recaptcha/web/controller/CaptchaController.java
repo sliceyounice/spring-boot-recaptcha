@@ -19,9 +19,9 @@ public class CaptchaController {
 
     @PostMapping
     @ResponseBody
-    public String postText(@RequestParam("g-recaptcha-response") String response, @RequestParam String text ) {
+    public String postText(@RequestParam("g-recaptcha-response") String response, @RequestBody TextDto textDto) {
         captchaService.validateCaptcha(response);
-        return text;
+        return textDto.getText();
     }
 
     public CaptchaController(CaptchaService captchaService) {

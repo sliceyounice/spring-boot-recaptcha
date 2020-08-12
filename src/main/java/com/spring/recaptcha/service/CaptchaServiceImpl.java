@@ -1,7 +1,5 @@
 package com.spring.recaptcha.service;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.spring.recaptcha.config.CaptchaKeys;
 import com.spring.recaptcha.exception.BadRequestException;
 import com.spring.recaptcha.exception.ServerErrorException;
